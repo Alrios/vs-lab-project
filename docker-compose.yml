@@ -9,4 +9,30 @@ services:
       - "8080:8080"
     restart: always
     volumes:
-      - "./backend:/backend"
+      - "./backend:/vs-lab-project/backend/"
+    depends_on: 
+      - db 
+    networks:
+      - backend
+
+  db:
+    container_name: mysql
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: VS_LAB_PROJECT
+      MYSQL_USER: vs
+      MYSQL_PASSWORD: vs123
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - backend  
+
+volumes:
+  db:
+
+networks:
+  backend:   

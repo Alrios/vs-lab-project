@@ -1,7 +1,8 @@
 FROM openjdk:17
 
-RUN mkdir -p /backend/
-WORKDIR /backend
+# Create the folder /vs-lab-project/backend/
+RUN mkdir -p /vs-lab-project/backend/
+WORKDIR /vs-lab-project/backend/
 
 COPY ./backend/src src
 # Copy maven executable to the image
