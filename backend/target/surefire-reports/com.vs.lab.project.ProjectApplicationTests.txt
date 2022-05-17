@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.vs.lab.project.ProjectApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.011 s - in com.vs.lab.project.ProjectApplicationTests
