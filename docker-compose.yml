@@ -1,9 +1,12 @@
 version: "3.8"
 services:
   backend:
+    container_name: spring-boot
     build:
-      context: backend
-      dockerfile: Dockerfile
+      context: ./
+      dockerfile: ./backend/Dockerfile
     ports:
       - "8080:8080"
     restart: always
+    volumes:
+      - "./backend:/backend"

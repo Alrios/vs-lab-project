@@ -10,6 +10,6 @@ public class greetings {
     
     @GetMapping(value = "/greeting")
     String helloWorld(){
-        return new String("sa111");
+        return new String("s1sadsadsadsax");
     }
 }
