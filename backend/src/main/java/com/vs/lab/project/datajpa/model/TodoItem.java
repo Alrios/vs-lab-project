@@ -8,7 +8,7 @@ import javax.persistence.Table;
 @Table(name = "TodoItem")
 public class TodoItem {
     @Id
-    @Column(name = "todo", length = 1024)
+    @Column(name = "todo", length = 1024, nullable = false)
 	private String todo;
 
     @Column(name = "priority")
@@ -22,7 +22,7 @@ public class TodoItem {
         this.priority = priority;
     }
 
-    public String todo() {
+    public String getTodo() {
 		return this.todo;
 	}
 	public void setTodo(String todo){
