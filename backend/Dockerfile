@@ -12,6 +12,5 @@ COPY ./backend/.mvn .mvn
 # Copy the pom.xml file
 COPY ./backend/pom.xml .
 
-RUN ./mvnw clean install
-
-CMD ./mvnw spring-boot:run
+# Execute clean install and spring-boot:run AFTER the containers are up
+CMD ["/bin/bash", "-c", "./mvnw clean install && ./mvnw spring-boot:run"]
