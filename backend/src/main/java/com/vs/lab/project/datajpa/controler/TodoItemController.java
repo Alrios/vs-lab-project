@@ -66,7 +66,7 @@ public class TodoItemController {
     }
 
     @PutMapping()
-    public ResponseEntity<TodoItem> updateEmployee(@RequestBody TodoItem todoItemToUpdate) {
+    public ResponseEntity<TodoItem> updateTodoItem(@RequestBody TodoItem todoItemToUpdate) {
         String id = todoItemToUpdate.getTodo();
         if (!todoItemRepository.existsById(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
