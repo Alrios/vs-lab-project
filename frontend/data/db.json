@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "text": "Staubsaugen",
+      "id": 2
+    },
+    {
+      "text": "Wäsche waschen",
+      "id": 3
+    },
+    {
+      "text": "Hausaufgaben",
+      "id": 4
+    },
+    {
+      "text": "Lernen",
+      "id": 5
+    },
+    {
+      "text": "Weinen",
+      "id": 6
+    },
+    {
+      "text": "Einkaufen",
+      "id": 7
+    }
+  ]
+}
