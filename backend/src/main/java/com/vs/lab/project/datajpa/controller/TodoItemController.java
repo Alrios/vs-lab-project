@@ -1,10 +1,11 @@
-package com.vs.lab.project.datajpa.controler;
+package com.vs.lab.project.datajpa.controller;
 
 import com.vs.lab.project.datajpa.repository.TodoItemRepository;
 import com.vs.lab.project.datajpa.model.TodoItem;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,12 +30,14 @@ public class TodoItemController {
    *
    * @return the list
    */
+  @CrossOrigin(origins = "http://localhost:3000")
   @GetMapping
   public List<TodoItem> getAllTodoItems() {
     return todoItemRepository.findAll();
   }
 
  
+  @CrossOrigin(origins = "http://localhost:3000")
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping(consumes = "application/json", produces = "application/json")
   public TodoItem createTodoItem(@RequestBody TodoItem todoItem){
@@ -43,6 +46,7 @@ public class TodoItemController {
       return todoItem;
   }
 
+     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/{name}")
     public ResponseEntity<Optional<TodoItem>> getTodoItemById(@PathVariable String name) {
         Optional<TodoItem> todoItem = todoItemRepository.findById(name);
@@ -52,6 +56,7 @@ public class TodoItemController {
         return new ResponseEntity<>(todoItem, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/{name}")
     public ResponseEntity<Optional<TodoItem>> deleteTodoItem(@PathVariable String name) {
 
@@ -65,6 +70,7 @@ public class TodoItemController {
         return new ResponseEntity<>(todoItem, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping()
     public ResponseEntity<TodoItem> updateTodoItem(@RequestBody TodoItem todoItemToUpdate) {
         String id = todoItemToUpdate.getTodo();
