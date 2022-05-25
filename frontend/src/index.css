@@ -16,9 +16,11 @@
 }
 .navbar h1 > a {
   color: #f1356d;
+  font-size: 40px;
 }
 .navbar .links {
   margin-left: auto;
+  font-size: 20px;
 }
 .navbar a {
   margin-left: 16px;
@@ -35,17 +37,22 @@
 }
 
 /* todo previews / list */
+.todo-preview {  
+  border-radius: 5px;
+  opacity: 1;
+  transition: 0.3s;
+}
 .todo-preview a {
   padding: 10px 16px;
   margin: 5px 0;
-  background-color: #8cc1df;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
+  align-items: center;  
 }
 .todo-preview:hover {
+  /* opacity: 0.8; */
   filter: brightness(110%);
+  transform: translate(5%);
 }
 .todo-preview h2 {
   font-size: 20px;
@@ -61,11 +68,11 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  border: 1px solid white;
 }
 .delBtn:hover {
-  filter: brightness(110%);
+  filter: brightness(120%);
 }
-
 .todo-list > h2{
   text-align: center;
   margin-bottom: 20px;

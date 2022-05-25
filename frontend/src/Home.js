@@ -24,7 +24,8 @@ const Home = () => {
         fetchTodos();
     }, [])
 
-    const deleteHandle = async (id) => {                         
+    const deleteHandle = async (id, e) => {
+        e.preventDefault();
         try{
             await api.delete('/todos/' + id);
             const newTodos = todos.filter(todo => todo.todo !== id);
