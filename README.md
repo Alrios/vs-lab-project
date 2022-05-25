@@ -16,6 +16,6 @@ docker-compose down
 
 
 ### Collaborators
- - [@Jebedeiah (Frontend))](https://github.com/Jebedeiah)
- - [@Alrios (Backend))](https://github.com/Alrios)
+ - [@Jebedeiah (Frontend)](https://github.com/Jebedeiah)
+ - [@Alrios (Backend)](https://github.com/Alrios)
  
