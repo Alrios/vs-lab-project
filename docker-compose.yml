@@ -25,7 +25,7 @@ services:
       - "3000:3000"
     restart: always
     environment:
-      WATCHPACK_POLLING: true
+      WATCHPACK_POLLING: "true"
     volumes:
       - "./frontend/data:/vs-lab-project/frontend/data/"
       - "./frontend/public:/vs-lab-project/frontend/public/"
